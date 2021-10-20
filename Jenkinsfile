@@ -1,11 +1,11 @@
 node {
     def Namespace = "default"
     def ImageName = "enel-helloword"
+    def ImageTag = "latest"
     def ECRLink = "https://581114568537.dkr.ecr.cn-north-1.amazonaws.com.cn/enel-helloword"
 
     stage ('checkout'){
         final scmVars = checkout(scm)
-        ImageTag = "${checkout(scm).GIT_COMMIT}"
     }
         
     stage('Docker Build and Push'){
