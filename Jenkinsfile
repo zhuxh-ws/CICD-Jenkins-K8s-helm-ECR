@@ -20,9 +20,9 @@ node {
 
     stage('Deploy helloworld on K8s'){
         dir("${env.WORKSPACE}"){
-            echo ok
-            docker tag enel-helloword:latest 581114568537.dkr.ecr.cn-north-1.amazonaws.com.cn/enel-helloword:latest
-            docker push 581114568537.dkr.ecr.cn-north-1.amazonaws.com.cn/enel-helloword:latest
+            'echo ok'
+            'docker tag enel-helloword:latest 581114568537.dkr.ecr.cn-north-1.amazonaws.com.cn/enel-helloword:latest'
+            'docker push 581114568537.dkr.ecr.cn-north-1.amazonaws.com.cn/enel-helloword:latest'
         }
     }
 }
