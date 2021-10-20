@@ -20,8 +20,7 @@ node {
 
     stage('Deploy helloworld on K8s'){
         dir("${env.WORKSPACE}"){
-            echo "ok test list"
-            #sh "ansible-playbook ./CI-CD/deploy/Jenkins_deploy_playbook.yml  --extra-vars ECRLink=${ECRLink}  --extra-vars ImageName=${ImageName} --extra-vars imageTag=${ImageTag} --extra-vars Namespace=${Namespace}"
+            echo ok
         }
     }
 }
