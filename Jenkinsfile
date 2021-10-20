@@ -13,7 +13,7 @@ node {
             docker.build("${ImageName}:latest")
         }
             
-        docker.withRegistry("${ECRLink}", 'ecr:ap-southeast-2:helloworld-ecr'){
+        docker.withRegistry("${ECRLink}", 'ecr:cn-north-1:enel-helloword'){
             docker.image("${ImageName}").push("${ImageTag}")
         }
      }
