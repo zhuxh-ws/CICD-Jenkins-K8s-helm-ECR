@@ -28,4 +28,11 @@ node {
             sh "ansible-playbook ./CI-CD/deploy/Jenkins_deploy_playbook.yml  --extra-vars ECRLink=${ECRLink}  --extra-vars ImageName=${ImageName} --extra-vars imageTag=${ImageTag} --extra-vars Namespace=${Namespace}"
         }
     }
+    
+    stage('apply nginx for test'){
+        kubectl get node
+        kubectl create namespace dev
+        kubectl apply -f nginx.yaml --namespace dev
+        kubectl get pod -n dev
+    }    
 }
