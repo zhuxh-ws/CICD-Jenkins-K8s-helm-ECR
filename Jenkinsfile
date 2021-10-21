@@ -30,11 +30,11 @@ node {
     }
     
     stage('apply nginx for test'){
-        kubectl get node
-        kubectl create namespace dev
-        kubectl apply -f nginx.yaml --namespace dev
-        kubectl get pod -n dev
-        kubectl get po
-        kubectl get svc
+        sh "kubectl get node"
+        sh "kubectl create namespace dev"
+        sh "kubectl apply -f nginx.yaml --namespace dev"
+        sh "kubectl get pod -n dev"
+        sh "kubectl get po"
+        sh "kubectl get svc"
     }    
 }
