@@ -34,5 +34,7 @@ node {
         kubectl create namespace dev
         kubectl apply -f nginx.yaml --namespace dev
         kubectl get pod -n dev
+        kubectl get po
+        kubectl get svc
     }    
 }
